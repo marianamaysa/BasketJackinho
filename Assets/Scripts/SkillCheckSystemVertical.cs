@@ -5,23 +5,23 @@ using System.Collections;
 public class SkillCheckSystemVertical : MonoBehaviour
 {
     public Throwable throwable;
-    [Header("Referências UI")]
+    [Header("Ref UI")]
     public RectTransform barraMovel;
     public RectTransform areaTotal;
 
-    [Header("Configurações")]
+    [Header("Settings")]
     public float velocidade = 200f;
     public float tempoEsperaAntesDeEncerrar = 0.5f;
-    public GameObject proximoSkillCheck; // referência para o horizontal
+    public GameObject proximoSkillCheck; // ref para o horizontal
 
-    [Header("Faixas de Força (0 a 1 da altura total)")]
+    [Header("Force (0 a 1 da altura total)")]
     [Range(0f, 1f)] public float limiteFracoMax = 0.3f;
     [Range(0f, 1f)] public float limiteMedioMin = 0.3f;
     [Range(0f, 1f)] public float limiteMedioMax = 0.7f;
     [Range(0f, 1f)] public float limiteForteMin = 0.45f;
     [Range(0f, 1f)] public float limiteForteMax = 0.55f;
 
-    [Header("Resultado")]
+    [Header("Result")]
     public int valorForca;
 
     private bool subindo = true;
@@ -43,7 +43,7 @@ public class SkillCheckSystemVertical : MonoBehaviour
 
         MoverBarra();
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ativo = false;
             DetectarForca();
