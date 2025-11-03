@@ -33,6 +33,6 @@ public class Throwable : MonoBehaviour
     {
         rb.useGravity = true; // Ativa a gravidade apenas no lançamento
         rb.linearVelocity = Vector3.zero; // Zera velocidade para evitar acumulo
-        rb.AddForce(new Vector3(horizontalForce, verticalForce, 0), ForceMode.Impulse); // Aplica a força como impulso
+        rb.AddForce(new Vector3(horizontalForce * 3.5f, verticalForce * 3.5f, 0), ForceMode.Impulse); // Aplica a força como impulso
     }
 }
