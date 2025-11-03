@@ -1705,8 +1705,8 @@ Transform:
   m_GameObject: {fileID: 1916027467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6195905, y: -4.62, z: 1}
-  m_LocalScale: {x: 2000, y: 1, z: 1}
+  m_LocalPosition: {x: 2.6206, y: -4.62, z: 1}
+  m_LocalScale: {x: 93096, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2079,10 +2079,22 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 936f98a59647f5d48a8cfabb227bc430, type: 2}
+    - target: {fileID: 1907526818705660427, guid: 18ada8ad5b80b294c85595d8e9c11117, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 122b93f95bd8792419a9a3c1c169c6db, type: 2}
+    - target: {fileID: 2223224707867984325, guid: 18ada8ad5b80b294c85595d8e9c11117, type: 3}
+      propertyPath: forceMultiplier
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2223224707867984325, guid: 18ada8ad5b80b294c85595d8e9c11117, type: 3}
       propertyPath: primeiroSkillCheck
       value: 
       objectReference: {fileID: 382528265}
+    - target: {fileID: 3102563831886431086, guid: 18ada8ad5b80b294c85595d8e9c11117, type: 3}
+      propertyPath: m_Drag
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4680274505798119829, guid: 18ada8ad5b80b294c85595d8e9c11117, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7
