@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int totalPoints = 0; // Ponto total do jogador
     public Text pointsText; // Ref a texto de UI para mostrar os pontos
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        // Inicializa o texto com "Pontos: 0" desde o início
+        // Inicializa o texto de pontos desde o início
         UpdatePointsText();
     }
 

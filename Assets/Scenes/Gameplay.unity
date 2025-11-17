@@ -166,6 +166,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalPoints: 0
   pointsText: {fileID: 699072972}
+  mainCamera: {fileID: 330585545}
+  parallaxPrefabs:
+  - {fileID: 7814729337058463664, guid: 5217e57d78f7d744c9caba143fdcd8ec, type: 3}
+  - {fileID: 7814729337058463664, guid: 5217e57d78f7d744c9caba143fdcd8ec, type: 3}
+  - {fileID: 7814729337058463664, guid: 5217e57d78f7d744c9caba143fdcd8ec, type: 3}
+  - {fileID: 7814729337058463664, guid: 5217e57d78f7d744c9caba143fdcd8ec, type: 3}
+  - {fileID: 7814729337058463664, guid: 5217e57d78f7d744c9caba143fdcd8ec, type: 3}
+  parallaxScales:
+  - 1
+  objWidths:
+  - 100
+  initialPos:
+  - {x: -10, y: 0, z: 0}
 --- !u!114 &197178229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,15 +191,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c64ee32870b3c4fb1804ca57581f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 330585548}
   collectiblePrefab: {fileID: 5596119748874321039, guid: 444f6d333bc5b54438c02bdb563a1547, type: 3}
   boostPrefab: {fileID: 8915766228514928259, guid: 3d3eb99162977e344994742803c2b6c0, type: 3}
   spawnInterval: 2
-  spawnDistanceAhead: 10
-  spawnAreaWidth: 5
+  spawnDistanceAhead: 20
+  spawnAreaWidth: 8
   spawnAreaHeight: 3
   minObjPerSpawn: 1
   maxObjPerSpawn: 3
-  minDistBetweenSpawns: 5
+  initialSpawnCount: 5
+  speedMultiplier: 0.5
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

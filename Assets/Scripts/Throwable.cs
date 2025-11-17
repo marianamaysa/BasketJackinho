@@ -45,7 +45,7 @@ public class Throwable : MonoBehaviour
                 if (!isMoving)
                 {
                     isMoving = true;
-                    Debug.Log("🎯 Objeto começou a se mover!");
+                    Debug.Log("Objeto começou a se mover!");
                 }
             }
             else
@@ -53,12 +53,12 @@ public class Throwable : MonoBehaviour
                 if (isMoving)
                 {
                     isMoving = false;
-                    Debug.Log("🛑 Objeto parou de se mover!");
+                    Debug.Log("Objeto parou de se mover!");
 
                     // Se o jogador estava jogando e a bola parou → derrota
                     if (isPlaying)
                     {
-                        Debug.Log("💀 Jogo acabou! Carregando cena de derrota...");
+                        Debug.Log("Jogo acabou! Carregando cena de derrota...");
                         SceneManager.LoadScene(cenaDerrota);
                     }
                 }
@@ -73,6 +73,6 @@ public class Throwable : MonoBehaviour
         rb.AddForce(new Vector3(horizontalForce, verticalForce, 0) * forceMultiplier, ForceMode.Impulse);
 
         isPlaying = true; // Marca que o jogo começou
-        Debug.Log("🚀 Bola lançada! isPlaying = true");
+        Debug.Log("Bola lançada! isPlaying = true");
     }
 }
