@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4680274505798119829}
   - component: {fileID: 5270932073290415335}
   - component: {fileID: 1907526818705660427}
-  - component: {fileID: 415106369789854288}
   - component: {fileID: 2223224707867984325}
   - component: {fileID: 3102563831886431086}
+  - component: {fileID: 1241374856468632291}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -89,27 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &415106369789854288
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5987103753912023481}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2223224707867984325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfa707ac2a560a48992015ed191ba41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cenaDerrota: Derrota
+  horizontalForce: 0
+  verticalForce: 0
+  forceMultiplier: 3.5
   primeiroSkillCheck: {fileID: 0}
+  isMoving: 0
+  isPlaying: 0
 --- !u!54 &3102563831886431086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,3 +135,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &1241374856468632291
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987103753912023481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
