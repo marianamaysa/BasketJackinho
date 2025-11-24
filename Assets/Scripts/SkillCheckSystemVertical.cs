@@ -15,11 +15,11 @@ public class SkillCheckSystemVertical : MonoBehaviour
     public GameObject proximoSkillCheck; // ref para o horizontal
 
     [Header("Force (0 a 1 da altura total)")]
-    [Range(0f, 2f)] public float limiteFracoMax = 0.3f;
-    [Range(0f, 2f)] public float limiteMedioMin = 0.3f;
-    [Range(0f, 2f)] public float limiteMedioMax = 0.7f;
-    [Range(0f, 2f)] public float limiteForteMin = 0.45f;
-    [Range(0f, 5f)] public float limiteForteMax = 0.55f;
+    [Range(0f, 1f)] public float limiteFracoMax = 0.3f;
+    [Range(0f, 1f)] public float limiteMedioMin = 0.3f;
+    [Range(0f, 1f)] public float limiteMedioMax = 0.7f;
+    [Range(0f, 1f)] public float limiteForteMin = 0.45f;
+    [Range(0f, 1f)] public float limiteForteMax = 0.55f;
 
     [Header("Result")]
     public int valorForca;

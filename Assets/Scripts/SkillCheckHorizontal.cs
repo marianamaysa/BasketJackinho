@@ -5,35 +5,35 @@ using System.Collections;
 public class SkillCheckHorizontal : MonoBehaviour
 {
     public Throwable throwable;
-    [Header("Refs UI")]
+    [Header("Referências UI")]
     public RectTransform barraMovel;
     public RectTransform areaTotal;
 
-    [Header("Settings")]
+    [Header("Configurações")]
     public float velocidade = 200f;
     public float tempoEsperaAntesDeEncerrar = 0.5f;
 
-    [Header("Force (0 a 1 da altura total)")]
-    [Range(0f, 2f)] public float limiteFracoMax = 0.3f;
-    [Range(0f, 2f)] public float limiteMedioMin = 0.3f;
-    [Range(0f, 2f)] public float limiteMedioMax = 0.7f;
-    [Range(0f, 2f)] public float limiteForteMin = 0.45f;
-    [Range(0f, 5f)] public float limiteForteMax = 0.55f;
+    [Header("Faixas de Força (0 a 1 da altura total)")]
+    [Range(0f, 1f)] public float limiteFracoMax = 0.3f;
+    [Range(0f, 1f)] public float limiteMedioMin = 0.3f;
+    [Range(0f, 1f)] public float limiteMedioMax = 0.7f;
+    [Range(0f, 1f)] public float limiteForteMin = 0.45f;
+    [Range(0f, 1f)] public float limiteForteMax = 0.55f;
 
-    [Header("Result")]
+    [Header("Resultado")]
     public int valorForca;
 
-    private bool indoDireita = true;  // Ajustado para movimento horizontal
+    private bool subindo = true;
     private bool ativo = true;
 
-    private float larguraMin;  // Ajustado para largura
-    private float larguraMax;
+    private float alturaMin;
+    private float alturaMax;
 
     void Start()
     {
-        float halfBarheight = barraMovel.rect.height / 2f;
-        larguraMin = -((areaTotal.rect.height / 2f) - halfBarheight);
-        larguraMax = ((areaTotal.rect.height / 2f) - halfBarheight);
+        float halfBarHeight = barraMovel.rect.height / 2f;
+        alturaMin = -((areaTotal.rect.height / 2f) - halfBarHeight);
+        alturaMax = ((areaTotal.rect.height / 2f) - halfBarHeight);
     }
 
     void Update()
@@ -55,17 +55,17 @@ public class SkillCheckHorizontal : MonoBehaviour
         float movimento = velocidade * Time.deltaTime;
         Vector2 pos = barraMovel.anchoredPosition;
 
-        pos.y += indoDireita ? movimento : -movimento;
+        pos.y += subindo ? movimento : -movimento;
 
-        if (pos.y >= larguraMax)
+        if (pos.y >= alturaMax)
         {
-            pos.y = larguraMax;
-            indoDireita = false;
+            pos.y = alturaMax;
+            subindo = false;
         }
-        else if (pos.y <= larguraMin)
+        else if (pos.y <= alturaMin)
         {
-            pos.y = larguraMin;
-            indoDireita = true;
+            pos.y = alturaMin;
+            subindo = true;
         }
 
         barraMovel.anchoredPosition = pos;
@@ -73,7 +73,7 @@ public class SkillCheckHorizontal : MonoBehaviour
 
     void DetectarForca()
     {
-        float proporcao = Mathf.InverseLerp(larguraMin, larguraMax, barraMovel.anchoredPosition.y);
+        float proporcao = Mathf.InverseLerp(alturaMin, alturaMax, barraMovel.anchoredPosition.y);
 
         if (proporcao >= limiteForteMin && proporcao <= limiteForteMax)
             valorForca = 10;

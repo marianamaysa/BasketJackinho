@@ -12,7 +12,7 @@ public class ParallaxManager : MonoBehaviour
 
     private List<Transform> pool;
     private Vector3 previousCamPos;
-    private float prefabWidth = 100;
+    private float prefabWidth = 50;
 
     void Start()
     {
