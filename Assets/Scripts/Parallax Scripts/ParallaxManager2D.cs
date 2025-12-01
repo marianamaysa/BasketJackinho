@@ -52,10 +52,11 @@ public class ParallaxManager2D : MonoBehaviour
     private void LateUpdate()
     {
         distance = cam.position.x - camStartPos.x;
+        transform.position = new Vector3(cam.position.x, transform.position.y, 110);
         for (int i = 0; i < background.Length; i++)
         { 
             float speed = backSpeed[i] * parallaxSpeed;
-            mat[i].SetTextureOffset("_MainTex", new Vector2(speed, 0)*speed);
+            mat[i].SetTextureOffset("_MainTex", new Vector2(distance, 0)*speed);
         }
     }
 }
