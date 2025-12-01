@@ -32,9 +32,8 @@ public class SkillCheckSystemVertical : MonoBehaviour
 
     void Start()
     {
-        float halfBarHeight = barraMovel.rect.height / 2f;
-        alturaMin = -((areaTotal.rect.height / 2f) - halfBarHeight);
-        alturaMax = ((areaTotal.rect.height / 2f) - halfBarHeight);
+        alturaMin = -areaTotal.rect.height;
+        alturaMax =areaTotal.rect.height;
     }
 
     void Update()

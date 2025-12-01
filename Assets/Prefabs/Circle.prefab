@@ -169,4 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfa707ac2a560a48992015ed191ba41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cenaDerrota: Derrota
   throwKey: 32
+  isMoving: 0
+  isPlaying: 0
