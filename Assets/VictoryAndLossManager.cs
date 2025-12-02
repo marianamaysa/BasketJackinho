@@ -15,7 +15,6 @@ public class VictoryAndLossManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(isPlaying);
         // Verifica se o jogo está ativo e o objeto está em movimento
         if (isPlaying == true && throwable.isMoving == false)
         {
@@ -23,4 +22,13 @@ public class VictoryAndLossManager : MonoBehaviour
             Debug.Log("perdeu");
         }
     }
+        private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            SceneManager.LoadScene("Vitoria");
+            Debug.Log("Ganhou");
+        }
+    }
 }
+

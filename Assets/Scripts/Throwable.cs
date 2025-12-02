@@ -28,15 +28,35 @@ public class Throwable : MonoBehaviour
         isPlaying = false; // Começa como falso
     }
 
-    /*
+
+
+
     void Update()
     {
-        // Ativa o skill check ao pressionar Space
-        if (Input.GetKeyDown(throwKey))
-            ThrowBall();
-    }
-    */
+        if (rb != null)
+        {
+            if (rb.linearVelocity.magnitude > 0.3f)
+            {
+                if (!isMoving)
+                {
+                    isMoving = true;
+                }
+            }
+            else
+            {
+                if (isMoving)
+                {
+                    isMoving = false;
 
+                    // Se o jogador estava jogando e a bola parou → derrota
+                    if (isPlaying)
+                    {
+                        SceneManager.LoadScene(cenaDerrota);
+                    }
+                }
+            }
+        }
+    }
     public void ThrowBall()
     {
         rb.linearVelocity = Vector2.zero;

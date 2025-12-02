@@ -7,7 +7,7 @@ public class WinCondition : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            SceneManager.LoadScene("Vitoria");
+            
             Debug.Log("Ganhou");
         }
     }
